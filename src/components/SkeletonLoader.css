@@ -1,0 +1,136 @@
+.skeleton-wrapper {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.skeleton-navbar {
+  height: 80px;
+  background: #f9fafb;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.skeleton-hero {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skeleton-badge {
+  width: 200px;
+  height: 32px;
+  background: #e5e7eb;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.skeleton-line {
+  height: 24px;
+  background: #e5e7eb;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.skeleton-hero-title {
+  height: 64px;
+  width: 80%;
+  margin-bottom: 1.5rem;
+}
+
+.skeleton-hero-text {
+  height: 20px;
+  width: 100%;
+}
+
+.skeleton-hero-text.short {
+  width: 70%;
+}
+
+.skeleton-section-title {
+  height: 40px;
+  width: 60%;
+  margin: 0 auto 1rem;
+}
+
+.skeleton-section-text {
+  height: 20px;
+  width: 50%;
+  margin: 0 auto 2rem;
+}
+
+.skeleton-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.skeleton-button {
+  width: 150px;
+  height: 48px;
+  background: #e5e7eb;
+  border-radius: 0.5rem;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.skeleton-card {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+}
+
+.skeleton-card .skeleton-title {
+  height: 24px;
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+.skeleton-card .skeleton-text {
+  height: 16px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-card .skeleton-text.short {
+  width: 80%;
+}
+
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skeleton-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .skeleton-hero,
+  .skeleton-section {
+    padding: 2rem 1rem;
+  }
+  
+  .skeleton-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

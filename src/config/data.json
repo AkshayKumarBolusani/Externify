@@ -1,0 +1,223 @@
+{
+  "hero": {
+    "badge": "Early Industry Exposure Made Simple",
+    "title": "Real Experience.",
+    "subtitle": "Zero Pressure.",
+    "description": "Short externships that give you real industry exposure without the commitment. Perfect for students who want to learn by doing.",
+    "primaryButton": "Know More",
+    "secondaryButton": "Get in Touch"
+  },
+  "about": {
+    "badge": "What is Externify?",
+    "title": "Platform Connecting Students with Short Externships",
+    "description": "A revolutionary approach to early industry exposure, designed specifically for students who want to learn by observing and experiencing real-world work environments.",
+    "features": [
+      {
+        "title": "Early Industry Exposure",
+        "description": "Get real-world experience before graduation, understanding how industries actually work"
+      },
+      {
+        "title": "For Tier 2 & Tier 3 Students",
+        "description": "Specifically designed to bridge the opportunity gap for students from smaller colleges"
+      },
+      {
+        "title": "Beginner-Friendly",
+        "description": "No prior experience needed - perfect for students in their early college years"
+      },
+      {
+        "title": "Low-Commitment",
+        "description": "Flexible externships that fit around your academic schedule without overwhelming you"
+      },
+      {
+        "title": "Exposure-Based Learning",
+        "description": "Learn by observing and shadowing, not through traditional internship structures"
+      },
+      {
+        "title": "Short Duration",
+        "description": "Quick, focused experiences that provide maximum value in minimal time"
+      }
+    ]
+  },
+  "problems": {
+    "badge": "The Challenge",
+    "title": "Problems We Solve",
+    "description": "Students need real-world exposure, but traditional paths create barriers",
+    "items": [
+      {
+        "title": "Lack of Real-World Exposure",
+        "description": "Students graduate without understanding industry workflows and professional environments"
+      },
+      {
+        "title": "High Entry Barriers",
+        "description": "Most internships require prior skills or experience, leaving beginners behind"
+      },
+      {
+        "title": "Limited Opportunities",
+        "description": "Tier 2 & Tier 3 students have fewer chances to connect with industry professionals"
+      },
+      {
+        "title": "Low Awareness",
+        "description": "Externships are not well-known in India, creating a missed opportunity for both sides"
+      },
+      {
+        "title": "Mismatched Needs",
+        "description": "Startups need short-term support, not long-term internship commitments"
+      },
+      {
+        "title": "Early Career Confusion",
+        "description": "Students struggle to choose career paths without hands-on industry experience"
+      }
+    ]
+  },
+  "solution": {
+    "badge": "Our Solution",
+    "title": "Short, Flexible Externships",
+    "description": "We've reimagined how students gain industry exposure through structured, low-commitment experiences that benefit everyone.",
+    "features": [
+      {
+        "title": "Shadowing Professionals",
+        "description": "Observe real workflows and learn from industry experts in their natural work environment"
+      },
+      {
+        "title": "Light Assistance Tasks",
+        "description": "Contribute meaningfully with simple, guided projects that help you learn while you work"
+      },
+      {
+        "title": "Easy Application Process",
+        "description": "Simple, streamlined process for students to discover and apply to externships"
+      },
+      {
+        "title": "Simple Posting Process",
+        "description": "Companies can post opportunities in minutes with our intuitive platform"
+      }
+    ],
+    "highlights": [
+      "Beginner-friendly",
+      "Low commitment",
+      "Flexible schedule",
+      "Real exposure"
+    ]
+  },
+  "targetUsers": {
+    "badge": "Who We Serve",
+    "title": "Our Target Users",
+    "users": [
+      {
+        "title": "College Students",
+        "description": "Especially those in early years who want to explore industries before committing to a career path"
+      },
+      {
+        "title": "Tier 2 & Tier 3 Students",
+        "description": "Students from smaller colleges who have fewer opportunities but equal ambition"
+      },
+      {
+        "title": "Startups & Small Businesses",
+        "description": "Growing companies that need short-term support and want to build their talent pipeline"
+      },
+      {
+        "title": "Founders & Small Teams",
+        "description": "Entrepreneurs and small teams looking for motivated early talent exposure"
+      },
+      {
+        "title": "Companies Seeking Talent",
+        "description": "Organizations looking to expose students to their industry and discover future talent"
+      }
+    ]
+  },
+  "value": {
+    "badge": "Value Proposition",
+    "title": "Benefits for Everyone",
+    "students": {
+      "title": "Value for Students",
+      "benefits": [
+        "Early industry exposure before graduation",
+        "No prior experience required - perfect for beginners",
+        "Learn by observing real workflows and professional environments",
+        "Build professional networks and connections",
+        "Discover career paths through hands-on experience",
+        "Low commitment, high value learning opportunities",
+        "Specifically designed for Tier 2 & Tier 3 students",
+        "Beginner-friendly opportunities with guided support",
+        "Flexible scheduling that fits your academic calendar",
+        "Exposure-based learning without overwhelming responsibilities"
+      ]
+    },
+    "companies": {
+      "title": "Value for Companies",
+      "benefits": [
+        "Short-term support without long-term commitments",
+        "Access to motivated early talent eager to learn",
+        "Build your talent pipeline and identify future hires",
+        "Simple posting and management process",
+        "Light assistance on simple tasks from engaged externs",
+        "Expose students to your industry and company culture",
+        "Perfect for startups and small teams with limited resources",
+        "Cost-effective way to engage with potential future employees",
+        "Help shape the next generation of professionals",
+        "Flexible externship structures that fit your needs"
+      ]
+    }
+  },
+  "features": {
+    "badge": "Platform Features",
+    "title": "Everything You Need",
+    "items": [
+      {
+        "number": "01",
+        "title": "Smart Matching",
+        "description": "AI-powered matching connects students with relevant externship opportunities based on interests and goals"
+      },
+      {
+        "number": "02",
+        "title": "Flexible Scheduling",
+        "description": "Choose externships that fit your academic calendar and availability with customizable time commitments"
+      },
+      {
+        "number": "03",
+        "title": "Progress Tracking",
+        "description": "Monitor your learning journey and document your externship experience with built-in tracking tools"
+      },
+      {
+        "number": "04",
+        "title": "Company Dashboard",
+        "description": "Manage applications, schedule sessions, and track extern engagement through an intuitive dashboard"
+      },
+      {
+        "number": "05",
+        "title": "Learning Resources",
+        "description": "Access guides and best practices to maximize your externship experience and professional growth"
+      },
+      {
+        "number": "06",
+        "title": "Community Support",
+        "description": "Connect with other externs and share experiences in our supportive community platform"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "description": "Join us in bridging the gap between education and industry. Start your journey with Externify today.",
+    "primaryButton": "Start Your Journey",
+    "secondaryButton": "Learn More"
+  },
+  "contact": {
+    "badge": "Get in Touch",
+    "title": "Let's Connect",
+    "description": "Have questions or want to learn more? We'd love to hear from you."
+  },
+  "footer": {
+    "description": "Connecting students with industry through short externships. Bridging the gap between education and real-world experience.",
+    "links": {
+      "platform": [
+        { "text": "About", "href": "#about" },
+        { "text": "How It Works", "href": "#solution" },
+        { "text": "Value", "href": "#value" }
+      ],
+      "connect": [
+        { "text": "Contact Us", "href": "#contact" },
+        { "text": "Email", "href": "mailto:hello@externify.com" }
+      ]
+    }
+  }
+}
+
