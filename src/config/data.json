@@ -200,6 +200,33 @@
     "primaryButton": "Start Your Journey",
     "secondaryButton": "Learn More"
   },
+  "roadmap": {
+    "badge": "How It Works",
+    "title": "The Externify Journey",
+    "description": "Simple, seamless, and transparent process from posting to placement",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Requirement Listing",
+        "description": "Companies post their short-term externship requirements and desired skills"
+      },
+      {
+        "number": 2,
+        "title": "Students Apply",
+        "description": "Students discover and apply to opportunities matching their interests and availability"
+      },
+      {
+        "number": 3,
+        "title": "Screening & Filtering",
+        "description": "Companies review applications and shortlist candidates based on their criteria"
+      },
+      {
+        "number": 4,
+        "title": "Shortlisted to Company",
+        "description": "Selected students start their externship and begin learning from industry experts"
+      }
+    ]
+  },
   "contact": {
     "badge": "Get in Touch",
     "title": "Let's Connect",
@@ -215,7 +242,7 @@
       ],
       "connect": [
         { "text": "Contact Us", "href": "#contact" },
-        { "text": "Email", "href": "mailto:hello@externify.com" }
+        { "text": "Email", "href": "mailto:akshaykumarbolusani@gmail.com" }
       ]
     }
   }

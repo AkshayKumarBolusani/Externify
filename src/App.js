@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import './App.css';
 import siteData from './config/data.json';
 import SkeletonLoader from './components/SkeletonLoader';
@@ -30,41 +31,6 @@ const GraduationIcon = () => (
   </svg>
 );
 
-const SparkleIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 2L13.09 8.26L19 9L13.09 9.74L12 16L10.91 9.74L5 9L10.91 8.26L12 2Z" fill="url(#gradient3)"/>
-    <defs>
-      <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
-
-const LightningIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="url(#gradient4)"/>
-    <defs>
-      <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
-
-const EyeIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5Z" fill="url(#gradient5)"/>
-    <defs>
-      <linearGradient id="gradient5" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
 
 const RocketIcon = () => (
   <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,141 +44,72 @@ const RocketIcon = () => (
   </svg>
 );
 
-const BlockIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="url(#gradient7)"/>
-    <defs>
-      <linearGradient id="gradient7" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
+// Roadmap Step Icons
+const ListingIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 5H7C5.9 5 5 5.9 5 7V19C5 20.1 5.9 21 7 21H17C18.1 21 19 20.1 19 19V7C19 5.9 18.1 5 17 5H15M9 5C9 4.45 9.45 4 10 4H14C14.55 4 15 4.45 15 5M9 5H15M9 11H15M9 17H15" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
-const LocationIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="url(#gradient8)"/>
-    <defs>
-      <linearGradient id="gradient8" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
+const ApplyIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 13L11 15L15 11M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
-const LightbulbIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 2C8.13 2 5 5.13 5 9C5 11.38 6.19 13.47 8 14.74V17C8 17.55 8.45 18 9 18H15C15.55 18 16 17.55 16 17V14.74C17.81 13.47 19 11.38 19 9C19 5.13 15.87 2 12 2ZM14 13.7L13 14.5V16H11V14.5L10 13.7C8.84 12.81 8 11.48 8 9.97C8 7.24 10.24 5 13 5C15.76 5 18 7.24 18 9.97C18 11.48 17.16 12.81 16 13.7ZM12 6C10.9 6 10 6.9 10 8H14C14 6.9 13.1 6 12 6Z" fill="url(#gradient9)"/>
-    <defs>
-      <linearGradient id="gradient9" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
+const FilterIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 6H21V6.5C21 7.5 20 8.5 19 9.5L14 14V21L10 19V14C9 13.5 8 12.5 8 11.5V6.5C8 5.5 7 4.5 6 3.5H3C2.45 4 3 6 3 6Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
-const ClockIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 13H11V7H13V13Z" fill="url(#gradient10)"/>
-    <defs>
-      <linearGradient id="gradient10" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
+const CompanyIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 21H21V5H3M5 9H7V14H5M10 9H12V14H10M15 9H17V14H15M5 5V3H19V5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
-const ObserveIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z" fill="url(#gradient11)"/>
-    <defs>
-      <linearGradient id="gradient11" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
+// About Section Icons - Modern Gradient Badges
+const IndustryIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 18L12 5L19 18M12 9V14" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
-const HandshakeIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M9 11.24V7.5C9 6.12 10.12 5 11.5 5S14 6.12 14 7.5V11.24C14.61 11.09 15.23 11 15.86 11C16.41 11 16.96 11.05 17.5 11.14V7.5C17.5 4.46 15.04 2 12 2S6.5 4.46 6.5 7.5V11.14C7.04 11.05 7.59 11 8.14 11C8.77 11 9.39 11.09 10 11.24M20.5 12C20.5 13.93 19.17 15.58 17.29 16.28L18.78 19.05L17.22 19.95L15.71 17.18C15.14 17.39 14.58 17.5 14 17.5C13.42 17.5 12.86 17.39 12.29 17.18L10.78 19.95L9.22 19.05L10.71 16.28C8.83 15.58 7.5 13.93 7.5 12V11H9.5V12C9.5 13.38 10.62 14.5 12 14.5S14.5 13.38 14.5 12V11H20.5V12Z" fill="url(#gradient12)"/>
-    <defs>
-      <linearGradient id="gradient12" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
+const StudentsIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 12C17.66 12 19 10.66 19 9C19 7.34 17.66 6 16 6C14.34 6 13 7.34 13 9C13 10.66 14.34 12 16 12M8 12C9.66 12 11 10.66 11 9C11 7.34 9.66 6 8 6C6.34 6 5 7.34 5 9C5 10.66 6.34 12 8 12M16 14C14 14 10 14.9 10 16.5V19H22V16.5C22 14.9 18 14 16 14M8 14C6 14 2 14.9 2 16.5V19H14V16.5C14 14.9 10 14 8 14Z" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
-const DocumentIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M14 2H6C4.89 2 4 2.89 4 4V20C4 21.11 4.89 22 6 22H18C19.11 22 20 21.11 20 20V8L14 2M18 20H6V4H13V9H18V20Z" fill="url(#gradient13)"/>
-    <defs>
-      <linearGradient id="gradient13" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
+const BeginnerIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 12L11 14L15 10M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
-const BuildingIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 7V3H2V21H22V7H12M6 19H4V17H6V19M6 15H4V13H6V15M6 11H4V9H6V11M6 7H4V5H6V7M10 19H8V17H10V19M10 15H8V13H10V15M10 11H8V9H10V11M10 7H8V5H10V7M20 19H12V17H14V15H12V13H14V11H12V9H14V7H12V5H20V19Z" fill="url(#gradient14)"/>
-    <defs>
-      <linearGradient id="gradient14" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
+const FlexibilityIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 9C5.66 9 7 7.66 7 6C7 4.34 5.66 3 4 3C2.34 3 1 4.34 1 6C1 7.66 2.34 9 4 9M20 9C21.66 9 23 7.66 23 6C23 4.34 21.66 3 20 3C18.34 3 17 4.34 17 6C17 7.66 18.34 9 20 9M12 5C13.66 5 15 3.66 15 2C15 0.34 13.66 0 12 0C10.34 0 9 0.34 9 2C9 3.66 10.34 5 12 5M12 22C9 22 5 19 5 15V12H19V15C19 19 15 22 12 22Z" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
-const StudentIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="url(#gradient15)"/>
-    <defs>
-      <linearGradient id="gradient15" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
+const ExposureIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
-const SchoolIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M5 13.18V17.18L12 21L19 17.18V13.18L12 17L5 13.18ZM12 3L1 9L12 15L21 10.09V17H23V9L12 3Z" fill="url(#gradient16)"/>
-    <defs>
-      <linearGradient id="gradient16" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
-
-const BriefcaseIcon = () => (
-  <svg className="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10 2H14C15.1 2 16 2.9 16 4V6H20C21.1 6 22 6.9 22 8V19C22 20.1 21.1 21 20 21H4C2.9 21 2 20.1 2 19V8C2 6.9 2.9 6 4 6H8V4C8 2.9 8.9 2 10 2ZM14 6V4H10V6H14ZM4 8V19H20V8H4Z" fill="url(#gradient17)"/>
-    <defs>
-      <linearGradient id="gradient17" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6366f1" />
-        <stop offset="100%" stopColor="#8b5cf6" />
-      </linearGradient>
-    </defs>
+const DurationIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -246,10 +143,28 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // EmailJS integration will be added later
-    console.log('Form submitted:', formData);
-    alert('Thank you for your interest! We will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    setIsSending(true);
+
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_vrtsg3n';
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_xzumc49';
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'OV-5cACEMR6SyraY0';
+
+    const templateParams = {
+      user_name: formData.name,
+      user_email: formData.email,
+      message: formData.message
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((result) => {
+        setIsSending(false);
+        setFormData({ name: '', email: '', message: '' });
+        alert('Thank you for your interest! We will get back to you soon.');
+      }, (error) => {
+        setIsSending(false);
+        console.error('EmailJS error:', error);
+        alert('Sorry — something went wrong sending your message. Please try again later.');
+      });
   };
 
   if (isLoading) {
@@ -262,6 +177,7 @@ function App() {
       <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
         <div className="nav-container">
           <div className="logo">
+            <img src="/favicon.svg" alt="Externify" className="site-logo" />
             <span className="logo-text">Externify</span>
           </div>
           <div className="nav-links">
@@ -337,13 +253,20 @@ function App() {
             <p className="section-description">{siteData.about.description}</p>
           </div>
           <div className="about-grid">
-            {siteData.about.features.map((feature, index) => (
-              <div key={index} className="about-card">
-                <div className="about-accent"></div>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-              </div>
-            ))}
+            {siteData.about.features.map((feature, index) => {
+              const icons = [IndustryIcon, StudentsIcon, BeginnerIcon, FlexibilityIcon, ExposureIcon, DurationIcon];
+              const gradients = ['linear-gradient(135deg, #ff6b6b 0%, #ff8e72 100%)', 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)', 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'];
+              const IconComponent = icons[index];
+              return (
+                <div key={index} className="about-card">
+                  <div className="about-icon" style={{ background: gradients[index] }}>
+                    <IconComponent />
+                  </div>
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -409,6 +332,36 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Roadmap Section */}
+      <section className="roadmap-section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-badge">{siteData.roadmap.badge}</span>
+            <h2 className="section-title">{siteData.roadmap.title}</h2>
+            <p className="section-description">{siteData.roadmap.description}</p>
+          </div>
+          <div className="roadmap-timeline">
+            <div className="roadmap-connector"></div>
+            {siteData.roadmap.steps.map((step, index) => {
+              const icons = [ListingIcon, ApplyIcon, FilterIcon, CompanyIcon];
+              const IconComponent = icons[index];
+              return (
+                <div key={index} className={`roadmap-card roadmap-card-${index + 1}`}>
+                  <div className="roadmap-card-dot"></div>
+                  <div className="roadmap-card-content">
+                    <div className="roadmap-card-icon">
+                      <IconComponent />
+                    </div>
+                    <h3>{step.title}</h3>
+                    <p>{step.description}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -509,7 +462,9 @@ function App() {
                   placeholder="Tell us about your interest in Externify..."
                 ></textarea>
               </div>
-              <button type="submit" className="btn-primary btn-large">Send Message</button>
+              <button type="submit" className="btn-primary btn-large" disabled={isSending}>
+                {isSending ? 'Sending...' : 'Send Message'}
+              </button>
             </form>
           </div>
         </div>
@@ -522,8 +477,8 @@ function App() {
             <h2 className="cta-title">{siteData.cta.title}</h2>
             <p className="cta-description">{siteData.cta.description}</p>
             <div className="cta-buttons">
-              <button className="btn-primary btn-large">{siteData.cta.primaryButton}</button>
-              <button className="btn-outline btn-large">{siteData.cta.secondaryButton}</button>
+              <a href="#contact" className="btn-primary btn-large">{siteData.cta.primaryButton}</a>
+              <a href="#about" className="btn-outline btn-large">{siteData.cta.secondaryButton}</a>
             </div>
           </div>
         </div>
@@ -535,6 +490,7 @@ function App() {
           <div className="footer-content">
             <div className="footer-brand">
               <div className="logo">
+                <img src="/favicon.svg" alt="Externify" className="site-logo" />
                 <span className="logo-text">Externify</span>
               </div>
               <p>{siteData.footer.description}</p>
@@ -555,7 +511,7 @@ function App() {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; 2024 Externify. All rights reserved.</p>
+            <p>&copy; 2026 Externify. All rights reserved.</p>
           </div>
         </div>
       </footer>
