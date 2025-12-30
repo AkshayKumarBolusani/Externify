@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://externify.com/sitemap.xml
+Sitemap: https://externify.in/sitemap.xml
